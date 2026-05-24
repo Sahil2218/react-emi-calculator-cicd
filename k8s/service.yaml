@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: emi-calculator-service
+  namespace: emi-demo
+spec:
+  selector:
+    app: emi-calculator
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
